@@ -1,0 +1,95 @@
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: white;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-brand img {
+    width: 120px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.page-title {
+    font-weight: 600;
+}
+
+.page-subtitle {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+}
+
+.form-badge {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.95);
+    color: #1f2937;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    border: none;
+}
+
+.form-control[readonly] {
+    background: rgba(255,255,255,0.82);
+    color: #374151;
+}
+
+.textarea-lg {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form-text {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: rgba(255,255,255,0.92);
+}
+
+.info-box i {
+    font-size: 1rem;
+    margin-top: 2px;
+}
+
+.action-btn {
+    min-width: 180px;
+}
+
+.dropdown-menu {
+    z-index: 9999;
+}
