@@ -1,0 +1,75 @@
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: white;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-brand img {
+    width: 120px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.section-title {
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    background: rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+}
+
+.message.user {
+    background: #0d6efd;
+    margin-left: auto;
+}
+
+.message.master {
+    background: rgba(255,255,255,0.18);
+    margin-right: auto;
+}
+
+.small-label {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-control,
+.form-select {
+    border: none;
+}
+
+.status-badge {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+}
+
+.action-btn {
+    min-width: 180px;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="zakazivanje.css">
+    <title>Zahtevi</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="zahtevi.html">
+                    <img src="Resources/MojMajstor logo finalni-09.png" alt="MojMajstor logo">
+                </a>
+
+                <div class="d-flex align-items-center ms-auto gap-3">
+
+                    <!-- ZVONCE -->
+                    <div class="dropdown">
+                        <div class="position-relative" data-bs-toggle="dropdown" style="cursor: pointer;">
+                            <i class="bi bi-bell-fill fs-5 text-white"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                            </span>
+                        </div>
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><span class="dropdown-item">Nova poruka</span></li>
+                            <li><span class="dropdown-item">Zahtev prihvaćen</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- USER -->
+                    <div class="dropdown">
+                        <button class="btn btn-link text-white text-decoration-none dropdown-toggle p-0"
+                                type="button"
+                                data-bs-toggle="dropdown">
+                            Ognjen
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                            <li><a class="dropdown-item" href="zahtevi.html">Zahtevi</a></li>
+                            <li><a class="dropdown-item" href="index.html">Glavna stranica</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="container py-4">
+
+            <div class="mb-4">
+                <a href="zahtevi.html" class="btn btn-outline-light btn-sm">
+                    <i class="bi bi-arrow-left"></i> Nazad na zahteve
+                </a>
+            </div>
+
+            <h2 class="mb-4">Detalj zahteva</h2>
+
+            <div class="row g-4">
+                <!-- LEVI DEO -->
+                <div class="col-lg-5">
+                    <div class="glass-card mb-4">
+                        <h4 class="section-title">Osnovne informacije</h4>
+
+                        <p><strong>ID zahteva:</strong> <span id="zahtevId">101</span></p>
+                        <p><strong>Usluga:</strong> <span id="zahtevNaslov">Popravka slavine</span></p>
+                        <p><strong>Majstor:</strong> <span id="majstorIme">Marko Petrović</span></p>
+                        <p><strong>Lokacija:</strong> <span id="lokacija">Voždovac</span></p>
+                        <p><strong>Opis problema:</strong><br>
+                            <span id="opisZahteva">Slavina u kuhinji curi već nekoliko dana i potrebno je zameniti dihtung ili ceo mehanizam.</span>
+                        </p>
+                        <p>
+                            <strong>Status:</strong>
+                            <span id="statusBadge" class="badge bg-warning text-dark status-badge">Na čekanju</span>
+                        </p>
+                    </div>
+
+                    <div class="glass-card mb-4">
+                        <h4 class="section-title">Akcije</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <button class="btn btn-primary action-btn" onclick="toggleTermin()">Zakaži termin</button>
+                            <button class="btn btn-danger action-btn" onclick="toggleProblem()">Prijavi problem</button>
+                        </div>
+                    </div>
+
+                    <!-- ZAKAZIVANJE -->
+                    <div id="terminSekcija" class="glass-card mb-4 hidden">
+                        <h4 class="section-title">Zakazivanje termina</h4>
+
+                        <label class="form-label">Izaberi slobodan termin</label>
+                        <select class="form-select mb-3" id="terminSelect">
+                            <option value="">-- Izaberi termin --</option>
+                            <option>15.04.2026. u 10:00</option>
+                            <option>15.04.2026. u 14:00</option>
+                            <option>16.04.2026. u 09:30</option>
+                        </select>
+
+                        <button id="zakaziBtn" class="btn btn-primary action-btn" onclick="toggleTermin()">Potvrdi termin</button>
+                        <p id="terminPoruka" class="mt-3 mb-0"></p>
+                    </div>
+
+                    <!-- PRIJAVA PROBLEMA -->
+                    <div id="problemSekcija" class="glass-card hidden">
+                        <h4 class="section-title">Prijava problema</h4>
+
+                        <label class="form-label">Opis problema</label>
+                        <textarea id="problemText" class="form-control mb-3" rows="4" placeholder="Unesite opis problema..."></textarea>
+
+                        <button class="btn btn-warning" onclick="posaljiPrijavu()">Pošalji prijavu</button>
+                        <p id="problemPoruka" class="mt-3 mb-0"></p>
+                    </div>
+                </div>
+
+                <!-- DESNI DEO -->
+                <div class="col-lg-7">
+                    <div class="glass-card mb-4">
+                        <h4 class="section-title">Chat sa majstorom</h4>
+
+                        <div class="chat-box mb-3" id="chatBox">
+                            <div class="message user">
+                                Pozdrav, imam problem sa slavinom u kuhinji.
+                            </div>
+                            <div class="message master">
+                                Pozdrav, mogu da pogledam problem. Pošaljite mi još kratko da li stalno curi ili samo kad se otvori voda?
+                            </div>
+                        </div>
+
+                        <div class="row g-2">
+                            <div class="col-9">
+                                <input type="text" id="chatInput" class="form-control" placeholder="Unesite poruku...">
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-primary w-100" onclick="posaljiPoruku()">Pošalji</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OCENA I KOMENTAR -->
+                    <div id="reviewSekcija" class="glass-card hidden">
+                        <h4 class="section-title">Ocena i komentar</h4>
+
+                        <div class="mb-3">
+                            <label class="form-label">Ocena majstora</label>
+                            <select id="ocenaSelect" class="form-select">
+                                <option value="">-- Izaberi ocenu --</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Komentar</label>
+                            <textarea id="komentarText" class="form-control" rows="4" placeholder="Ostavite komentar..."></textarea>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-success" onclick="posaljiOcenu()">Sačuvaj ocenu</button>
+                            <button class="btn btn-secondary" onclick="posaljiKomentar()">Sačuvaj komentar</button>
+                        </div>
+
+                        <p id="reviewPoruka" class="mt-3 mb-0"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
