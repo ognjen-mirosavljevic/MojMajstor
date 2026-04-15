@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif; /* font stranice */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* DARK GRADIENT */
+    margin: 0; /* uklanja spoljne margine */
+    padding: 0; /* uklanja unutrašnje margine */
+    min-height: 100vh;
+    color: white;
+}
+
+/* GLAVNI KONTEJNER */
+.container {
+    width: 600px; /* širina glavnog bloka */
+    margin: 50px auto; /* centriranje */
+    background: rgba(255, 255, 255, 0.08); /* glass efekat */
+    padding: 25px; /* unutrašnji razmak */
+    border-radius: 12px; /* zaobljeni uglovi */
+    box-shadow: 0 0 20px rgba(0,0,0,0.3); /* senka */
+    backdrop-filter: blur(10px); /* blur efekat */
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* NASLOV */
+h2 {
+    text-align: center; /* centriran naslov */
+}
+
+/* INFO TEKST */
+.info {
+    text-align: center;
+    color: #d0d0d0;
+}
+
+/* KARTICA ZAHTEVA */
+.card {
+    margin-top: 20px; /* razmak iznad kartice */
+    padding: 15px; /* unutrašnji razmak */
+    border-radius: 10px; /* zaobljeni uglovi */
+    background: rgba(255,255,255,0.10); /* glass kartica */
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.2s;
+}
+
+/* hover efekat kartice */
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* naslov u kartici */
+.card h3 {
+    margin-top: 0;
+}
+
+/* TEKST U KARTICI */
+.card p {
+    margin: 6px 0;
+    color: #e0e0e0;
+}
+
+/* DUGMAD */
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* OSNOVNO DUGME */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: 0.2s;
+}
+
+/* PRIHVATI */
+.accept {
+    background: #2ecc71; /* modernija zelena */
+}
+
+.accept:hover {
+    background: #27ae60;
+}
+
+/* ODBIJ */
+.reject {
+    background: #e74c3c; /* modernija crvena */
+}
+
+.reject:hover {
+    background: #c0392b;
+}

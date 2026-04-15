@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif; /* Font stranice */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* DARK GRADIENT */
+    margin: 0; /* Uklanja razmake oko stranice */
+    padding: 0; /* Uklanja unutrašnje razmake */
+    min-height: 100vh;
+    color: white;
+}
+
+/* GLAVNI KONTEJNER */
+.container {
+    width: 600px; /* Širina forme */
+    margin: 40px auto; /* Centriranje */
+    background: rgba(255, 255, 255, 0.08); /* glass efekat */
+    padding: 25px; /* Unutrašnji razmak */
+    border-radius: 12px; /* Zaobljeni uglovi */
+    box-shadow: 0 0 20px rgba(0,0,0,0.3); /* senka */
+    backdrop-filter: blur(10px); /* blur efekat */
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* NASLOV */
+h2 {
+    text-align: center; /* Centriran naslov */
+}
+
+/* INFO TEKST */
+.info {
+    text-align: center;
+    color: #d0d0d0;
+}
+
+/* LABEL */
+label {
+    display: block; /* Svaki label ide u novi red */
+    margin-top: 15px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* DUGMAD */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* SAVE */
+.save {
+    background: #28a745;
+    color: white;
+    transition: 0.2s;
+}
+
+.save:hover {
+    background: #2ecc71;
+}
+
+/* CANCEL */
+.cancel {
+    background: #dc3545;
+    color: white;
+    transition: 0.2s;
+}
+
+.cancel:hover {
+    background: #ff4d5a;
+}
+
+/* KALENDAR SEKCIJA */
+.calendar {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.calendar h3 {
+    text-align: center;
+    color: #fff;
+}
+
+/* LEGENDA */
+.legend {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* BOJE LEGENDI */
+.box {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px 0 15px;
+    border-radius: 3px;
+}
+
+.free {
+    background: #2ecc71; /* zelena modernija */
+}
+
+.busy {
+    background: #e74c3c; /* crvena modernija */
+}
+
+/* GRID KALENDARA */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+/* DAN */
+.day {
+    padding: 10px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+/* ZAUZET DAN */
+.day.busy {
+    background: rgba(231, 76, 60, 0.3);
+    color: #ffb3b3;
+}

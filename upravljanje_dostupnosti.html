@@ -1,0 +1,95 @@
+<!DOCTYPE html> <!-- HTML5 dokument -->
+
+<html lang="sr"> <!-- Jezik stranice je srpski -->
+
+<head> <!-- Meta podaci (ne vidi se na stranici) -->
+    <meta charset="UTF-8"> <!-- Podrška za naša slova -->
+    <title>Upravljanje dostupnosti</title> <!-- Naslov taba u browseru -->
+    <link rel="stylesheet" href="upravljanje_dostupnosti_css.css"> <!-- Povezivanje CSS fajla -->
+</head>
+
+<body> <!-- Vidljivi deo stranice -->
+
+<div class="container"> <!-- Glavni okvir stranice -->
+
+    <h2>Upravljanje dostupnosti</h2> <!-- Naslov -->
+
+    <p class="info">
+        Podesite periode kada ste zauzeti ili slobodni.
+    </p>
+
+    <!-- UNOS DATUMA OD -->
+    <label>Datum od</label>
+    <input type="date" required>
+
+    <!-- UNOS DATUMA DO -->
+    <label>Datum do</label>
+    <input type="date" required>
+
+    <!-- STATUS DOSTUPNOSTI -->
+    <label>Status dostupnosti</label>
+    <input type="text" placeholder="npr. zauzet / slobodan" required>
+
+    <!-- DUGMAD -->
+    <div class="buttons">
+        <button type="submit" class="save">Potvrdi izmene</button>
+        <button type="reset" class="cancel">Odustani</button>
+    </div>
+
+    <!-- SIMULACIJA KALENDARA -->
+    <div class="calendar">
+
+        <h3>Kalendar dostupnosti</h3>
+
+        <!-- LEGENDA -->
+        <div class="legend">
+            <span class="box free"></span> Slobodan
+            <span class="box busy"></span> Zauzet
+        </div>
+
+        <!-- GRID KALENDARA (30 DANA) -->
+        <div class="grid">
+
+            <div class="day">1</div>
+            <div class="day busy">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day busy">5</div>
+            <div class="day">6</div>
+            <div class="day">7</div>
+
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day busy">10</div>
+            <div class="day">11</div>
+            <div class="day">12</div>
+            <div class="day">13</div>
+            <div class="day">14</div>
+
+            <div class="day">15</div>
+            <div class="day busy">16</div>
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day">19</div>
+            <div class="day busy">20</div>
+            <div class="day">21</div>
+
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day busy">24</div>
+            <div class="day">25</div>
+            <div class="day">26</div>
+            <div class="day">27</div>
+            <div class="day busy">28</div>
+
+            <div class="day">29</div>
+            <div class="day">30</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

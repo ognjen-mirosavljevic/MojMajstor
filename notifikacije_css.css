@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif; /* font stranice */
+    background: #f4f6f8; /* pozadina */
+    margin: 0;
+    padding: 0;
+}
+
+/* GLAVNI KONTEJNER */
+.container {
+    width: 500px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* HEADER */
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.back {
+    font-size: 22px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* LISTA NOTIFIKACIJA */
+.notifications {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* razmak između kartica */
+}
+
+/* JEDNA NOTIFIKACIJA */
+.notification {
+    padding: 12px;
+    border-radius: 8px;
+    background: #ecf0f1;
+    border-left: 5px solid #95a5a6;
+}
+
+/* NOVA NOTIFIKACIJA (NEPROČITANA) */
+.notification.new {
+    background: #e8f6ff;
+    border-left: 5px solid #3498db;
+}
+
+.notification p {
+    margin: 5px 0;
+}

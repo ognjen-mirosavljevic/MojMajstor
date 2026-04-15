@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Upravljanje profilom</title>
+    <link rel="stylesheet" href="upravljanje_profilom_css.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Upravljanje profilom</h2>
+
+    <form>
+        
+        <label>Ime i prezime</label>
+        <input type="text" required>
+
+        <label>Opis usluga</label>
+        <textarea required></textarea>
+
+        <label>Lokacija</label>
+        <input type="text" required>
+
+        <label>Kategorija</label>
+        <select>
+            <option>Vodoinstalater</option>
+            <option>Električar</option>
+            <option>Stolar</option>
+            <option>Molerski radovi</option>
+        </select>
+
+        <label>Datum početka rada</label>
+        <input type="date" required>
+
+        <div class="buttons">
+            <button type="submit" class="save">Sačuvaj</button>
+            <button type="reset" class="cancel">Odustani</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

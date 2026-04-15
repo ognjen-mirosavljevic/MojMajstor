@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* KONTEJNER */
+.container {
+    width: 500px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* HEADER */
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.back {
+    font-size: 22px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* LISTA */
+.inbox {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CHAT ITEM */
+.chat-item {
+    display: flex;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+}
+
+/* hover efekat */
+.chat-item:hover {
+    background: #f0f0f0;
+}
+
+/* aktivan chat */
+.chat-item.active {
+    background: #e8f6ff;
+}
+
+/* AVATAR */
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: #3498db;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* INFO */
+.chat-info {
+    flex: 1;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.chat-info p {
+    margin: 5px 0 0 0;
+    font-size: 13px;
+    color: #555;
+}
+
+.time {
+    font-size: 12px;
+    color: gray;
+}
+
+/* NEPROČITANO */
+.chat-item.unread {
+    background: #e8f6ff;
+}
+
+.chat-item.unread b {
+    font-weight: 900;
+}
+
+/* plava tačka za nepročitane */
+.chat-item.unread::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
