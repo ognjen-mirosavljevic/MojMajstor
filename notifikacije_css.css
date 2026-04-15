@@ -1,0 +1,95 @@
+/*Nikola Mladenovic 0187/23*/
+body {
+    font-family: Arial, sans-serif; /* font stranice */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* pozadina */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-brand img {
+    width: 120px;
+    height: auto;
+}
+
+/* GLAVNI KONTEJNER */
+.notifications-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HEADER */
+.header {
+    background: rgba(255,255,255,0.08);
+    color: white;
+    padding: 15px 18px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* STRELICA */
+.back {
+    font-size: 22px;
+    margin-right: 12px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* LISTA NOTIFIKACIJA */
+.notifications {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* razmak između kartica */
+}
+
+/* JEDNA NOTIFIKACIJA */
+.notification {
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.12);
+    border-left: 5px solid rgba(255,255,255,0.35);
+    transition: 0.2s;
+}
+
+/* HOVER */
+.notification:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+/* NOVA NOTIFIKACIJA (NEPROČITANA) */
+.notification.new {
+    background: rgba(13, 110, 253, 0.18);
+    border-left: 5px solid #0d6efd;
+}
+
+.notification p {
+    margin: 5px 0;
+    color: white;
+}
+
+/* DROPDOWN FIX */
+.dropdown-menu {
+    z-index: 9999;
+}

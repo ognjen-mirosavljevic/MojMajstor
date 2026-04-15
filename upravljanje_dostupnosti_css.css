@@ -1,0 +1,115 @@
+/*Nikola Mladenovic 0187/23*/
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-brand img {
+    width: 120px;
+}
+
+/* GLAVNI KONTEJNER */
+.availability-container {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* NASLOV */
+h2 {
+    text-align: center;
+}
+
+/* INFO */
+.info {
+    text-align: center;
+    color: #d0d0d0;
+}
+
+/* LABEL */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* INPUT */
+input {
+    margin-top: 5px;
+}
+
+/* DUGMAD */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* KALENDAR */
+.calendar {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.calendar h3 {
+    text-align: center;
+}
+
+/* LEGENDA */
+.legend {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* BOX */
+.box {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px 0 15px;
+    border-radius: 3px;
+}
+
+.free {
+    background: #2ecc71;
+}
+
+.busy {
+    background: #e74c3c;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+/* DAN */
+.day {
+    padding: 10px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.1);
+}
+
+/* ZAUZET */
+.day.busy {
+    background: rgba(231,76,60,0.3);
+}
+
+/* DROPDOWN FIX */
+.dropdown-menu {
+    z-index: 9999;
+}

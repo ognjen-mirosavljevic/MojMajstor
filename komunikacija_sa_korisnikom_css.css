@@ -1,0 +1,116 @@
+/* Nikola Mladenovic 0187/23 */
+
+/* POZADINA */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-brand img {
+    width: 120px;
+    height: auto;
+}
+
+/* GLAVNI CHAT KONTEJNER */
+.chat-container {
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+}
+
+/* HEADER CHATA */
+.chat-header {
+    padding: 14px 16px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Strelica */
+.back {
+    font-size: 22px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+/* INFO O KORISNIKU */
+.chat-user h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.chat-user p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* CHAT PORUKE */
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: rgba(255,255,255,0.04);
+}
+
+/* OSNOVNA PORUKA */
+.message {
+    padding: 10px 14px;
+    margin: 8px 0;
+    border-radius: 14px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+/* PORUKA KORISNIKA */
+.message.user {
+    background: #0d6efd;
+    color: white;
+    margin-left: auto;
+}
+
+/* PORUKA MAJSTORA */
+.message.master {
+    background: rgba(255,255,255,0.18);
+    color: white;
+    margin-right: auto;
+}
+
+/* INPUT DEO */
+.chat-input {
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.06);
+}
+
+.chat-input input {
+    flex: 1;
+}
+
+/* DROPDOWN FIX */
+.dropdown-menu {
+    z-index: 9999;
+}

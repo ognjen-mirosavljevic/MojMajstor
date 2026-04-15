@@ -1,0 +1,149 @@
+/*Nikola Mladenovic 0187/23*/
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-brand img {
+    width: 120px;
+    height: auto;
+}
+
+/* KONTEJNER */
+.inbox-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HEADER */
+.header {
+    background: rgba(255,255,255,0.08);
+    color: white;
+    padding: 15px 18px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* STRELICA */
+.back {
+    font-size: 22px;
+    margin-right: 12px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* LISTA */
+.inbox {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CHAT ITEM */
+.chat-item {
+    display: flex;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+    align-items: center;
+}
+
+/* hover efekat */
+.chat-item:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* aktivan chat */
+.chat-item.active {
+    background: rgba(13, 110, 253, 0.18);
+}
+
+/* AVATAR */
+.avatar {
+    width: 42px;
+    height: 42px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+/* INFO */
+.chat-info {
+    flex: 1;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.chat-info p {
+    margin: 5px 0 0 0;
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+}
+
+.time {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    white-space: nowrap;
+}
+
+/* NEPROČITANO */
+.chat-item.unread {
+    background: rgba(13, 110, 253, 0.10);
+}
+
+.chat-item.unread b {
+    font-weight: 900;
+}
+
+/* plava tačka za nepročitane */
+.chat-item.unread::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #0d6efd;
+    border-radius: 50%;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* DROPDOWN FIX */
+.dropdown-menu {
+    z-index: 9999;
+}

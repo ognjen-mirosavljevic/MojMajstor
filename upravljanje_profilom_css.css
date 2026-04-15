@@ -1,0 +1,59 @@
+/* Nikola Mladenovic 0187/23 */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: white;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-brand img {
+    width: 120px;
+    height: auto;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.95);
+    color: #1f2937;
+    padding: 10px 12px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    border: none;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.dropdown-menu {
+    z-index: 9999;
+}

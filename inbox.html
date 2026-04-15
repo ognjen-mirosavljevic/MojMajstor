@@ -1,0 +1,152 @@
+<!--Nikola Mladenovic 0187/23-->
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="inbox_css.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                <img src="Resources/MojMajstor logo finalni-09.png" alt="MojMajstor logo">
+            </a>
+
+            <div class="d-flex align-items-center ms-auto gap-3">
+
+                <div class="dropdown">
+                    <div class="position-relative" data-bs-toggle="dropdown" style="cursor: pointer;">
+                        <i class="bi bi-bell-fill fs-5 text-white"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </div>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a href="inbox.html" class="dropdown-item">Nova poruka</a></li>
+                        <li><a href="notifikacije.html" class="dropdown-item">Notifikacije</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-link text-white text-decoration-none dropdown-toggle p-0 border-0 shadow-none"
+                            type="button"
+                            id="userDropdown"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        <span id="userName">Korisnik</span>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                        <li><a class="dropdown-item" href="zahtevi.html">Zahtevi</a></li>
+                        <li><a class="dropdown-item" href="index.html">Glavna stranica</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+
+                <div class="inbox-container">
+
+                    <!-- HEADER -->
+                    <div class="header">
+
+                        <a href="glavnaStranica.html" class="back text-white text-decoration-none">
+                            <i class="bi bi-arrow-left"></i>
+                        </a>
+
+                        <h2>Inbox</h2>
+
+                    </div>
+
+                    <!-- LISTA CHATOVA -->
+                    <div class="inbox">
+
+                        <!-- NEPROČITANO -->
+                        <div class="chat-item unread active">
+
+                            <div class="avatar">M</div>
+
+                            <div class="chat-info">
+                                <div class="top">
+                                    <b>Marko Marković</b>
+                                    <span class="time">10:32</span>
+                                </div>
+                                <p>Prihvatam posao, možemo se dogovoriti...</p>
+                            </div>
+
+                        </div>
+
+                        <!-- NEPROČITANO -->
+                        <div class="chat-item unread">
+
+                            <div class="avatar">A</div>
+
+                            <div class="chat-info">
+                                <div class="top">
+                                    <b>Ana Jovanović</b>
+                                    <span class="time">09:15</span>
+                                </div>
+                                <p>Da li možete sutra da dođete?</p>
+                            </div>
+
+                        </div>
+
+                        <!-- PROČITANO -->
+                        <div class="chat-item">
+
+                            <div class="avatar">P</div>
+
+                            <div class="chat-info">
+                                <div class="top">
+                                    <b>Petar Petrović</b>
+                                    <span class="time">Juče</span>
+                                </div>
+                                <p>Hvala na obavljenom poslu!</p>
+                            </div>
+
+                        </div>
+
+                        <!-- NEPROČITANO -->
+                        <div class="chat-item unread">
+
+                            <div class="avatar">N</div>
+
+                            <div class="chat-info">
+                                <div class="top">
+                                    <b>Novi zahtev</b>
+                                    <span class="time">Novo</span>
+                                </div>
+                                <p>Imate novi zahtev od korisnika.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

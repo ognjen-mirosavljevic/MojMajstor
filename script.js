@@ -1,3 +1,4 @@
+// Ognjen Mirosavljevic
 document.addEventListener("DOMContentLoaded", function () {
     // KORISNIK (LOGIN SIMULACIJA)
     if (!localStorage.getItem("ulogovaniKorisnik")) {
