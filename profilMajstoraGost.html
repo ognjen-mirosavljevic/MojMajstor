@@ -22,47 +22,24 @@
 
             <div class="d-flex align-items-center ms-auto gap-3">
 
-                <div class="dropdown">
-                    <div class="position-relative" data-bs-toggle="dropdown" style="cursor: pointer;">
-                        <i class="bi bi-bell-fill fs-5 text-white"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            3
-                        </span>
-                    </div>
+                <a href="login.html" class="btn btn-outline-light">
+                    Login
+                </a>
 
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a href="inbox.html" class="dropdown-item">Nova poruka</a></li>
-                        <li><a href="notifikacije.html" class="dropdown-item">Notifikacije</a></li>
-                    </ul>
-                </div>
-
-                <div class="dropdown">
-                    <button class="btn btn-link text-white text-decoration-none dropdown-toggle p-0 border-0 shadow-none"
-                            type="button"
-                            id="userDropdown"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                        <span id="userName">Korisnik</span>
-                    </button>
-
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                        <li><a class="dropdown-item" href="profil.html">Profil</a></li>
-                        <li><a class="dropdown-item" href="zahtevi.html">Zahtevi</a></li>
-                        <li><a class="dropdown-item" href="indexKorisnik.html">Glavna stranica</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="login.html">Logout</a></li>
-                    </ul>
-                </div>
+                <a href="registracija.html" class="btn btn-primary">
+                    Registracija
+                </a>
 
             </div>
         </div>
     </nav>
 
     <div class="container pt-4">
-        <a href="indexKorisnik.html" id="nazadBtn" class="btn btn-outline-light btn-sm">
+        <a href="index.html" id="nazadBtn" class="btn btn-outline-light btn-sm">
             <i class="bi bi-arrow-left"></i> Nazad
         </a>
     </div>
+
     <div class="container py-5">
         <div class="row justify-content-center g-4">
 
@@ -79,22 +56,17 @@
                         <i class="bi bi-geo-alt-fill me-2"></i><span id="lokacijaMajstora">Lokacija</span>
                     </p>
 
-                    <a href="#" id="zakaziMajstoraLink" class="btn btn-primary w-100">
-                        <i class="bi bi-send me-2"></i>Pošalji zahtev
-                    </a>
+                    <!-- <h2 class="master-name">Marko Petrović</h2>
+                    <p class="master-category">Vodoinstalater</p>
 
-                    <!-- <div class="rating-box mb-3">
+                    <div class="rating-box mb-3">
                         <i class="bi bi-star-fill"></i>
                         <span>4.8 / 5.0</span>
                     </div>
 
                     <p class="master-location mb-4">
                         <i class="bi bi-geo-alt-fill me-2"></i>Voždovac, Beograd
-                    </p>
-
-                    <a href="kreiranjeZahteva.html?majstorId=101" class="btn btn-primary w-100">
-                        <i class="bi bi-send me-2"></i>Pošalji zahtev
-                    </a> -->
+                    </p> -->
                 </div>
             </div>
 
@@ -123,12 +95,12 @@
 
                     <div class="info-row">
                         <span class="info-label">Broj ocena:</span>
-                        <span id="brojOcena" class="info-value"></span>
+                        <span class="info-value">27</span>
                     </div>
 
                     <div class="info-row">
                         <span class="info-label">Prosečna ocena:</span>
-                        <span id="prosecnaOcena" class="info-value"></span>
+                        <span class="info-value">4.8</span>
                     </div>
                 </div>
 

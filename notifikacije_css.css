@@ -92,10 +92,4 @@ body {
 /* DROPDOWN FIX */
 .dropdown-menu {
     z-index: 9999;
-=======
-body {
-    font-family: Arial, sans-serif; /* font stranice */
-    background: #f4f6f8; /* pozadina */
-    margin: 0;
-    padding: 0;
 }

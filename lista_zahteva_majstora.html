@@ -1,0 +1,212 @@
+<!--Djordje Igic 2023/0178-->
+<!--version 1.0-->
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista zahteva majstora</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="lista_zahteva_majstora_css.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">
+            <img src="Resources/MojMajstor logo finalni-09.png" alt="MojMajstor logo">
+        </a>
+
+        <div class="d-flex align-items-center ms-auto gap-3">
+
+            <div class="dropdown">
+                <div class="position-relative" data-bs-toggle="dropdown" style="cursor: pointer;">
+                    <i class="bi bi-bell-fill fs-5 text-white"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        3
+                    </span>
+                </div>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a href="inbox.html" class="dropdown-item">Nova poruka</a></li>
+                    <li><a href="notifikacije.html" class="dropdown-item">Notifikacije</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-link text-white text-decoration-none dropdown-toggle p-0 border-0 shadow-none"
+                        type="button"
+                        id="userDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    <span id="userName">Admin</span>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                    <li><a class="dropdown-item" href="lista_korisnika.html">Korisnici</a></li>
+                    <li><a class="dropdown-item" href="lista_zahteva_majstora.html">Zahtevi majstora</a></li>
+                    <li><a class="dropdown-item" href="prijavnjeni_problemi.html">Prijavljeni problemi</a></li>
+                    <li><a class="dropdown-item" href="index.html">Glavna stranica</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</nav>
+
+<!-- SADRŽAJ -->
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-9">
+
+            <div class="requests-container">
+
+                <h2>Zahtevi majstora</h2>
+                <p class="info">Lista zahteva za odobravanje naloga majstora.</p>
+
+                <!-- KARTICA 1 -->
+                <div class="request-card">
+
+                    <div class="card-header-row">
+                        <div class="majstor-info">
+                            <div class="avatar">PP</div>
+                            <div>
+                                <p class="majstor-naziv">Petar Petrović</p>
+                                <p class="majstor-datum">Podnet: 14. april 2026.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="section-label">Tekst zahteva</p>
+                    <div class="zahtev-tekst">
+                        Molim za odobravanje mog naloga kao majstora elektroinstalatera.
+                        Imam 8 godina iskustva u stambenim i komercijalnim objektima i sve potrebne sertifikate.
+                    </div>
+
+                    <p class="section-label">Priloženi dokument</p>
+                    <a class="dokument-link" href="#" onclick="return false;">
+                        <i class="bi bi-file-earmark-text"></i>
+                        petar_petrovic_sertifikat.pdf
+                    </a>
+
+                    <hr class="card-divider">
+
+                    <p class="section-label">Objašnjenje odluke</p>
+                    <textarea class="objasnjenje" placeholder="Unesite obrazloženje (opciono)..."></textarea>
+
+                    <div class="card-buttons">
+                        <button class="btn btn-success">
+                            <i class="bi bi-check-lg me-1"></i> Prihvati
+                        </button>
+                        <button class="btn btn-danger">
+                            <i class="bi bi-x-lg me-1"></i> Odbij
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- KARTICA 2 -->
+                <div class="request-card">
+
+                    <div class="card-header-row">
+                        <div class="majstor-info">
+                            <div class="avatar">NN</div>
+                            <div>
+                                <p class="majstor-naziv">Nikola Nikolić</p>
+                                <p class="majstor-datum">Podnet: 12. april 2026.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="section-label">Tekst zahteva</p>
+                    <div class="zahtev-tekst">
+                        Podnosim zahtev za registraciju kao majstor vodoinstalater.
+                        Prilagao sam diplome i potvrdu o zaposlenju iz prethodnih firmi.
+                    </div>
+
+                    <p class="section-label">Priloženi dokument</p>
+                    <a class="dokument-link" href="#" onclick="return false;">
+                        <i class="bi bi-file-earmark-text"></i>
+                        nikola_nikolic_dokumenta.pdf
+                    </a>
+
+                    <hr class="card-divider">
+
+                    <p class="section-label">Objašnjenje odluke</p>
+                    <textarea class="objasnjenje" placeholder="Unesite obrazloženje (opciono)..."></textarea>
+
+                    <div class="card-buttons">
+                        <button class="btn btn-success">
+                            <i class="bi bi-check-lg me-1"></i> Prihvati
+                        </button>
+                        <button class="btn btn-danger">
+                            <i class="bi bi-x-lg me-1"></i> Odbij
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- KARTICA 3 -->
+                <div class="request-card">
+
+                    <div class="card-header-row">
+                        <div class="majstor-info">
+                            <div class="avatar">DD</div>
+                            <div>
+                                <p class="majstor-naziv">Dragan Dragović</p>
+                                <p class="majstor-datum">Podnet: 10. april 2026.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <p class="section-label">Tekst zahteva</p>
+                    <div class="zahtev-tekst">
+                        Zahtev za odobravanje profila majstora za krovne i fasadne radove.
+                        Poslujem samostalno već 5 godina i posedujte sve potrebne licence.
+                    </div>
+
+                    <p class="section-label">Priloženi dokument</p>
+                    <a class="dokument-link" href="#" onclick="return false;">
+                        <i class="bi bi-file-earmark-text"></i>
+                        dragan_dragovic_licence.pdf
+                    </a>
+
+                    <hr class="card-divider">
+
+                    <p class="section-label">Objašnjenje odluke</p>
+                    <textarea class="objasnjenje" placeholder="Unesite obrazloženje (opciono)..."></textarea>
+
+                    <div class="card-buttons">
+                        <button class="btn btn-success">
+                            <i class="bi bi-check-lg me-1"></i> Prihvati
+                        </button>
+                        <button class="btn btn-danger">
+                            <i class="bi bi-x-lg me-1"></i> Odbij
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

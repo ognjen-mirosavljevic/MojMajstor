@@ -1,0 +1,169 @@
+<!--Djordje Igic 2023/0178-->
+<!--version 1.0-->
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot asistent</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="komunikacija_sa_korisnikom_css.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                <img src="Resources/MojMajstor logo finalni-09.png" alt="Logo">
+            </a>
+
+            <div class="d-flex align-items-center ms-auto gap-3">
+
+                <div class="dropdown">
+                    <div class="position-relative" data-bs-toggle="dropdown" style="cursor: pointer;">
+                        <i class="bi bi-bell-fill fs-5 text-white"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            1
+                        </span>
+                    </div>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a href="inbox.html" class="dropdown-item">Nova poruka</a></li>
+                        <li><a href="notifikacije.html" class="dropdown-item">Notifikacije</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-link text-white text-decoration-none dropdown-toggle p-0 border-0 shadow-none"
+                            type="button"
+                            id="userDropdown"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        <span id="userName">Admin</span>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                        <li><a class="dropdown-item" href="lista_korisnika.html">Korisnici</a></li>
+                        <li><a class="dropdown-item" href="lista_zahteva_majstora.html">Zahtevi majstora</a></li>
+                        <li><a class="dropdown-item" href="prijavnjeni_problemi.html">Prijavljeni problemi</a></li>
+                        <li><a class="dropdown-item" href="index.html">Glavna stranica</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-10">
+
+                <div class="chat-container" style="max-width: 900px;">
+
+                    <div class="chat-header">
+
+                        <a href="index.html" class="back text-white text-decoration-none">
+                            <i class="bi bi-arrow-left"></i>
+                        </a>
+
+                        <div class="chat-user">
+                            <h3>AI Asistent</h3>
+                            <p>Status: online</p>
+                        </div>
+
+                    </div>
+
+                    <div class="chat-box" id="chatBox">
+
+                        
+                        <div class="message master">
+                            Zdravo! Kako mogu da vam pomognem?
+                        </div>
+
+                        <div class="message user">
+                            Treba mi pomoć oko instalacije tuša.
+                        </div>
+
+                        <div class="message master">
+                           🔧 Vodoinstalateri (za kompletnu instalaciju tuša)
+                            Vodoinstalater Novi Sad Zoki
+                            <br>Jedan od najhvaljenijih — ljudi ga često zovu za hitne intervencije i kompletna kupatila. Dobar izbor ako hoćeš da se sve uradi “bez razmišljanja”.
+                            <br>Vodoinstalater Novi Sad Duki
+                            <br>Pouzdan majstor, radi 24h. Dobar ako ti treba fleksibilan termin ili brza ugradnja.
+                            <br>NS Pro FIX Vodoinstalater
+                            <br>Profesionalniji pristup (firma), često rade kompletnu instalaciju + popravke.
+                            <br>Vodoinstalater Novi Sad - AquaTherm MDM
+                            <br>Manji tim, ali odlične ocene — dobar odnos cena/kvalitet.
+                            <br>🚿 Specijalizovano za montažu tuš kabina
+                            <br>Montaža tuš kabine Novi Sad | DML MONT
+                            <br>Ako već imaš kupljenu kabinu — oni su baš za to. Brzi i fokusirani samo na montažu.
+                            <br>🧰 Ako planiraš i renoviranje kupatila
+                            <br>Renoviranje kupatila Novi Sad
+                            <br>Rade sve: pločice, instalacije, kabine — “ključ u ruke”.
+                            <br>🛠️ Gde kupiti opremu (ako ti treba)
+                            <br>AkvaDom doo
+                            <br>CENTRAL KUPATILA
+                            <br>
+                            <br>Tu možeš uzeti kabinu, baterije, sifon itd.
+                            <br>
+                            <br>💡 Kratki saveti pre nego što zoveš majstora
+                            <br>Ako nemaš izvedene cevi i odvod → treba ti vodoinstalater
+                            <br>Ako samo menjaš kabinu → dovoljan je monter
+                            <br>Pitaj odmah:
+                            <br>da li rade hidroizolaciju
+                            <br>da li daju garanciju
+                            <br>koliko traje (obično 1-3 dana)
+
+                            <br>👉 Inače, ugradnja tuša nije baš “uradi sam” posao — greške mogu dovesti do curenja i vlage u zidovima
+                        </div>
+
+                    </div>
+
+                    <div class="chat-input">
+
+                        <input id="userInput" type="text" class="form-control" placeholder="Unesite pitanje...">
+
+                        <button id="sendBtn" class="btn btn-success">
+                            <i class="bi bi-send"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const input = document.getElementById("userInput");
+        const button = document.getElementById("sendBtn");
+        const chatBox = document.getElementById("chatBox");
+
+        button.addEventListener("click", () => {
+            const text = input.value.trim();
+            if (text === "") return;
+
+            const userMsg = document.createElement("div");
+            userMsg.className = "message user";
+            userMsg.textContent = text;
+
+            chatBox.appendChild(userMsg);
+            input.value = "";
+
+            chatBox.scrollTop = chatBox.scrollHeight;
+        });
+    </script>
+
+</body>
+</html>

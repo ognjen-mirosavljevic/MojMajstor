@@ -1,0 +1,212 @@
+/* Djordje Igic 2023/0178 */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-brand img {
+    width: 120px;
+    height: auto;
+}
+
+/* DROPDOWN FIX */
+.dropdown-menu {
+    z-index: 9999;
+}
+
+/* GLAVNI KONTEJNER */
+.requests-container {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.requests-container h2 {
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.requests-container .info {
+    text-align: center;
+    color: #d0d0d0;
+    margin-bottom: 20px;
+}
+
+/* KARTICA ZAHTEVA */
+.request-card {
+    margin-top: 16px;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: 0.2s;
+}
+
+.request-card:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+/* HEADER KARTICE */
+.card-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.majstor-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(13, 110, 253, 0.35);
+    border: 1px solid rgba(13, 110, 253, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #90c8ff;
+    flex-shrink: 0;
+}
+
+.majstor-naziv {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.majstor-datum {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* STATUS BADGE */
+.status-badge {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    border: 1px solid transparent;
+}
+
+.status-cekanje {
+    background: rgba(255, 193, 7, 0.15);
+    color: #ffc107;
+    border-color: rgba(255, 193, 7, 0.3);
+}
+
+.status-odobreno {
+    background: rgba(25, 135, 84, 0.2);
+    color: #75dd9f;
+    border-color: rgba(25, 135, 84, 0.4);
+}
+
+.status-odbijeno {
+    background: rgba(220, 53, 69, 0.2);
+    color: #f08090;
+    border-color: rgba(220, 53, 69, 0.4);
+}
+
+/* SEKCIJA LABELE */
+.section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+    margin: 0 0 6px;
+}
+
+/* TEKST ZAHTEVA */
+.zahtev-tekst {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+}
+
+/* DOKUMENT LINK */
+.dokument-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #90c8ff;
+    background: rgba(13, 110, 253, 0.12);
+    border: 1px solid rgba(13, 110, 253, 0.25);
+    border-radius: 8px;
+    padding: 7px 14px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.dokument-link:hover {
+    background: rgba(13, 110, 253, 0.22);
+    color: #b8dcff;
+}
+
+/* RAZDELNA LINIJA */
+.card-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 14px 0;
+}
+
+/* TEXTAREA */
+.objasnjenje {
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 10px 12px;
+    min-height: 76px;
+    resize: vertical;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+}
+
+.objasnjenje::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.objasnjenje:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.09);
+}
+
+/* DUGMAD */
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}

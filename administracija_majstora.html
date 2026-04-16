@@ -1,0 +1,242 @@
+<!--Djordje Igic 2023/0178-->
+<!--version 1.0-->
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Majstor</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Tvoj CSS -->
+    <link rel="stylesheet" href="profil.css">
+    <link rel="stylesheet" href="profilMajstora.css">
+
+    <style>
+        /* TAGOVI ZA ULOGE */
+        .role-tag {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255,255,255,0.1);
+            padding: 6px 10px;
+            border-radius: 20px;
+            margin: 4px;
+            gap: 6px;
+        }
+
+        .role-tag i {
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .role-container {
+            padding: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            min-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html">
+            <img src="Resources/MojMajstor logo finalni-09.png" alt="MojMajstor">
+        </a>
+
+        <div class="d-flex align-items-center ms-auto gap-3">
+
+            <div class="dropdown">
+                <div class="position-relative" data-bs-toggle="dropdown" style="cursor: pointer;">
+                    <i class="bi bi-bell-fill fs-5 text-white"></i>
+                    <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">3</span>
+                </div>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a href="#" class="dropdown-item">Nova poruka</a></li>
+                    <li><a href="#" class="dropdown-item">Notifikacije</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-link text-white text-decoration-none dropdown-toggle p-0 border-0 shadow-none"
+                        type="button"
+                        id="userDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    <span id="userName">Admin</span>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                    <li><a class="dropdown-item" href="lista_korisnika.html">Korisnici</a></li>
+                    <li><a class="dropdown-item" href="lista_zahteva_majstora.html">Zahtevi majstora</a></li>
+                    <li><a class="dropdown-item" href="prijavnjeni_problemi.html">Prijavljeni problemi</a></li>
+                    <li><a class="dropdown-item" href="index.html">Glavna stranica</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</nav>
+
+<!-- SADRŽAJ -->
+<div class="container mt-5">
+
+    <h2 class="text-center">Pregled majstora</h2>
+
+    <div class="profil-card mx-auto">
+
+        <form>
+
+            <div class="row">
+
+                <!-- IME -->
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Ime</label>
+                    <input type="text" class="form-control" value="Marko">
+                </div>
+
+                <!-- PREZIME -->
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Prezime</label>
+                    <input type="text" class="form-control" value="Petrović">
+                </div>
+
+                <!-- USERNAME -->
+                <div class="col-12 mb-3">
+                    <label class="form-label">Korisničko ime</label>
+                    <input type="text" class="form-control" value="marko_p">
+                </div>
+
+                <!-- EMAIL -->
+                <div class="col-12 mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" value="marko@gmail.com">
+                </div>
+
+                <!-- TELEFON -->
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Telefon</label>
+                    <input type="text" class="form-control" value="064/123-4567">
+                </div>
+
+                <!-- LOKACIJA -->
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Lokacija</label>
+                    <input type="text" class="form-control" value="Beograd">
+                </div>
+
+                <!-- ADRESA -->
+                <div class="col-12 mb-3">
+                    <label class="form-label">Adresa</label>
+                    <input type="text" class="form-control" value="Voždovac">
+                </div>
+
+                <!-- ULOGE -->
+                <div class="col-12 mb-3">
+                    <label class="form-label">Uloge (kategorije)</label>
+
+                    <div class="role-container" id="roles">
+
+                        <span class="role-tag">
+                            Vodoinstalater
+                            <i class="bi bi-x-circle" onclick="removeRole(this)"></i>
+                        </span>
+
+                        <span class="role-tag">
+                            Električar
+                            <i class="bi bi-x-circle" onclick="removeRole(this)"></i>
+                        </span>
+
+                    </div>
+
+                    <!-- DODAVANJE -->
+                    <div class="d-flex mt-2 gap-2">
+                        <input type="text" id="newRole" class="form-control" placeholder="Dodaj ulogu...">
+                        <button type="button" class="btn btn-secondary" onclick="addRole()">Dodaj</button>
+                    </div>
+                </div>
+
+                <!-- OPIS -->
+                <div class="col-12 mb-3">
+                    <label class="form-label">Opis</label>
+                    <textarea class="form-control" rows="3">Iskusan majstor za vodu i instalacije...</textarea>
+                </div>
+
+                <!-- OCENA -->
+                <div class="info-row">
+                        <span class="info-label">Broj ocena:</span>
+                        <span class="info-value">27</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Prosečna ocena:</span>
+                        <span class="info-value">4.8</span>
+                    </div>
+
+                <!-- STATUS -->
+                <div class="col-12 mb-3">
+                    <label class="form-label">Status</label>
+                    <select class="form-select">
+                        <option>Aktivan</option>
+                        <option>Blokiran</option>
+                    </select>
+                </div>
+
+                <!-- RAZLOG -->
+                <div class="col-12 mb-4">
+                    <label class="form-label">Razlog izmene / blokiranja</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+
+            </div>
+
+            <!-- DUGMAD -->
+            <div class="d-flex gap-3">
+                <button type="button" class="btn btn-primary w-100">Sačuvaj izmene</button>
+                <button type="button" class="btn btn-danger w-100">Blokiraj</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+    function removeRole(el) {
+        el.parentElement.remove();
+    }
+
+    function addRole() {
+        const input = document.getElementById("newRole");
+        const value = input.value.trim();
+
+        if (value === "") return;
+
+        const container = document.getElementById("roles");
+
+        const tag = document.createElement("span");
+        tag.className = "role-tag";
+        tag.innerHTML = `${value} <i class="bi bi-x-circle" onclick="removeRole(this)"></i>`;
+
+        container.appendChild(tag);
+        input.value = "";
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

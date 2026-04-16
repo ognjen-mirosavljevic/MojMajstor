@@ -1,0 +1,54 @@
+/* Bojan Spasic 2023/0355 */
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: white;
+}
+
+.navbar {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+}
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+.login-container {
+    max-width: 440px;
+    width: 100%;
+}
+
+.login-card {
+    background: rgba(255,255,255,0.10);
+    border: none;
+    border-radius: 16px;
+    padding: 2.5rem;
+    color: white;
+}
+
+.form-control {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 12px 16px;
+}
+
+.form-control::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.form-control:focus {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.4);
+    box-shadow: none;
+    color: white;
+}
+
+.btn-primary {
+    background: #0d6efd;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+}

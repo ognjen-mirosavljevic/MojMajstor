@@ -1,0 +1,162 @@
+<!--Djordje Igic 2023/0178-->
+<!--version 1.0-->
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista korisnika</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Tvoj CSS -->
+    <link rel="stylesheet" href="komunikacija_sa_korisnikom_css.css">
+
+    <style>
+        .user-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .user-item {
+            padding: 12px 16px;
+            margin: 6px 0;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.2s;
+        }
+
+        .user-item:hover {
+            background: rgba(255,255,255,0.15);
+            cursor: pointer;
+        }
+
+        .role {
+            font-size: 15px;
+            opacity: 0.8;
+        }
+
+        .role.master {
+            color: lightgreen;
+        }
+
+        .role.user {
+            color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ISTI NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">
+            <img src="Resources/MojMajstor logo finalni-09.png" alt="MojMajstor logo">
+        </a>
+
+        <div class="d-flex align-items-center ms-auto gap-3">
+
+            <div class="dropdown">
+                <div class="position-relative" data-bs-toggle="dropdown" style="cursor: pointer;">
+                    <i class="bi bi-bell-fill fs-5 text-white"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        3
+                    </span>
+                </div>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a href="inbox.html" class="dropdown-item">Nova poruka</a></li>
+                    <li><a href="notifikacije.html" class="dropdown-item">Notifikacije</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-link text-white text-decoration-none dropdown-toggle p-0 border-0 shadow-none"
+                        type="button"
+                        id="userDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    <span id="userName">Admin</span>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                    <li><a class="dropdown-item" href="lista_korisnika.html">Korisnici</a></li>
+                    <li><a class="dropdown-item" href="lista_zahteva_majstora.html">Zahtevi majstora</a></li>
+                    <li><a class="dropdown-item" href="prijavnjeni_problemi.html">Prijavljeni problemi</a></li>
+                    <li><a class="dropdown-item" href="index.html">Glavna stranica</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</nav>
+
+<!-- SADRŽAJ -->
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+
+            <div class="chat-container" style="max-width: 800px;">
+
+                <!-- HEADER -->
+                <div class="chat-header">
+                    <h3 class="m-0">Korisnici</h3>
+                </div>
+
+                <!-- LISTA -->
+                <div class="user-list">
+
+                    <a href="administracija_korisnika.html" style="color: white; text-decoration: none;">
+                    <div class="user-item">
+                        <span>Darko Lazić</span>
+                        <span class="role user">Korisnik</span>
+                    </div>
+                    </a>
+
+                    <a href="administracija_majstora.html" style="color: white; text-decoration: none;">
+                    <div class="user-item">
+                        <span>Marko Petrović</span>
+                        <span class="role master">Majstor</span>
+                    </div>
+                    </a>
+
+                    <div class="user-item">
+                        <span>Jovan Jovanović</span>
+                        <span class="role user">Korisnik</span>
+                    </div>
+
+                    <div class="user-item">
+                        <span>Nikola Nikolić</span>
+                        <span class="role master">Majstor</span>
+                    </div>
+
+                    <div class="user-item">
+                        <span>Ana Anić</span>
+                        <span class="role user">Korisnik</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
